@@ -10,7 +10,7 @@ public class OrderItem
     /// <summary>
     /// Id купленного продукта
     /// </summary>
-    public Guid Id { get; set ;}
+    public Guid Id { get; init ;}
 
     /// <summary>
     /// Название продукта на момент заказа

@@ -5,6 +5,7 @@ namespace VendingMachine.Models;
 /// </summary>
 public class Product
 {
+    public Guid Id { get; init; }
     /// <summary>
     /// Название продукта
     /// </summary>
