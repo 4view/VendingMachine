@@ -1,4 +1,4 @@
-namespace VendingMachine.Models;
+namespace VendingMachine.Core.Models;
 
 /// <summary>
 /// Заказ

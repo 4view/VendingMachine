@@ -1,6 +1,4 @@
-using System.Diagnostics.Contracts;
-
-namespace VendingMachine.Models;
+namespace VendingMachine.Core.Models;
 
 /// <summary>
 /// Позиция в заказе 

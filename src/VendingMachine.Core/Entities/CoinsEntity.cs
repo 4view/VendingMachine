@@ -1,4 +1,4 @@
-namespace VendingMachine.Entities;
+namespace VendingMachine.Core.Entities;
 
 /// <summary>
 /// Монеты
