@@ -14,9 +14,5 @@ public class ProductConfiguration : IEntityTypeConfiguration<ProductEntity>
 
         builder.Property(p => p.Quantity)
             .IsRequired();
-
-        builder.HasOne(p => p.BrandEntity)
-            .WithMany(p => p.ProductsEntity)
-            .HasForeignKey(p => p.BrandId);
     }
 }
