@@ -20,5 +20,8 @@ public class OrderEntity
     /// </summary>
     public decimal TotalAmount { get; set; }
 
+    /// <summary>
+    /// Список продуктов в заказе
+    /// </summary>
     public List<OrderItemEntity> Items { get; set; }
 }
