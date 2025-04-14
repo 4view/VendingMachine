@@ -17,6 +17,11 @@ public class Product
     public decimal Price { get; set; }
 
     /// <summary>
+    /// Изображение продукта
+    /// </summary>
+    public Uri Image { get; set; }
+
+    /// <summary>
     /// Количесвто продукта в автомате 
     /// </summary>
     public int Quantity { get; set; }
