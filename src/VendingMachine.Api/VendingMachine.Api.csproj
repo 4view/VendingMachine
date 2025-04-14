@@ -6,4 +6,12 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Devart.Data.PostgreSql.EFCore.Design" Version="8.4.193" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\VendingMachine.Data\VendingMachine.Data.csproj" />
+  </ItemGroup>
+
 </Project>
