@@ -11,21 +11,6 @@ public class OrderItem
     public Guid Id { get; init ;}
 
     /// <summary>
-    /// Название продукта на момент заказа
-    /// </summary>
-    public string ProductName { get; set; }
-
-    /// <summary>
-    /// Бренд на момент заказа
-    /// </summary>
-    public string BrandName { get; set; }
-
-    /// <summary>
-    /// Цена на момент заказа
-    /// </summary>
-    public decimal Price { get; set; }
-
-    /// <summary>
     /// Количества купленного продукта
     /// </summary>
     public int Quantity { get; set; }
