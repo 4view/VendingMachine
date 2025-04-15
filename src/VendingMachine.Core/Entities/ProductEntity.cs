@@ -29,7 +29,7 @@ public class ProductEntity
     /// <summary>
     /// Id бренда
     /// </summary>
-    public Guid BrandId { get; init; }
+    public Guid BrandEntityId { get; init; }
     
     /// <summary>
     /// Бренд товара

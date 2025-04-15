@@ -4,7 +4,7 @@ public class CoinsConfigurations : IEntityTypeConfiguration<CoinsEntity>
     {
         builder.Property(p => p.Denomination)
             .IsRequired()
-            .HasColumnType("decimal(18,2)");
+            .HasColumnType("decimal(18,0)");
             
         builder.Property(p => p.Count)
             .IsRequired();
