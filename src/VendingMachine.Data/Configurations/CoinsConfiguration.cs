@@ -8,5 +8,8 @@ public class CoinsConfigurations : IEntityTypeConfiguration<CoinsEntity>
             
         builder.Property(p => p.Count)
             .IsRequired();
+        
+        builder.Property(p => p.isBlocked)
+            .IsRequired();
     }
 }

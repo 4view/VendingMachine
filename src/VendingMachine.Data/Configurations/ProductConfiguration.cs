@@ -9,10 +9,15 @@ public class ProductConfiguration : IEntityTypeConfiguration<ProductEntity>
             .HasMaxLength(100);
 
         builder.Property(p => p.Price)
-            .IsRequired()
-            .HasColumnType("decimal(18,2)");
+            .IsRequired();
+
+        builder.Property(p => p.Image)
+            .IsRequired();
 
         builder.Property(p => p.Quantity)
             .IsRequired();
+        
+        builder.HasOne(p => p.BrandEntity)
+            .WithMany(b => b.ProductsEntity);
     }
 }
