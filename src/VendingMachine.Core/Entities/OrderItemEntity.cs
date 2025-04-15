@@ -25,7 +25,7 @@ public class OrderItemEntity
     /// <summary>
     /// Id продукта
     /// </summary>
-    public int? ProductEntityId { get; set; }
+    public Guid ProductEntityId { get; set; }
 
     public ProductEntity ProductEntity { get; set; }
 }
