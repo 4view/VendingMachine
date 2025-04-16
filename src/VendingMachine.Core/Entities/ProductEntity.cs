@@ -19,7 +19,7 @@ public class ProductEntity
     /// <summary>
     /// Изображение продукта
     /// </summary>
-    public Uri Image { get; set; }
+    public string Image { get; set; }
 
     /// <summary>
     /// Количесвто продукта в автомате 
