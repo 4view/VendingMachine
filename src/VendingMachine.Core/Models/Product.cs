@@ -1,3 +1,5 @@
+using VendingMachine.Core.Entities;
+
 namespace VendingMachine.Core.Models;
 
 /// <summary>
@@ -5,6 +7,8 @@ namespace VendingMachine.Core.Models;
 /// </summary>
 public class Product
 {
+    public ProductEntity _entity;
+
     public Guid Id { get; init; }
     /// <summary>
     /// Название продукта
@@ -19,7 +23,7 @@ public class Product
     /// <summary>
     /// Изображение продукта
     /// </summary>
-    public Uri Image { get; set; }
+    public string Image { get; set; }
 
     /// <summary>
     /// Количесвто продукта в автомате 
@@ -35,4 +39,37 @@ public class Product
     /// Бренд товара
     /// </summary>
     public Brand Brand { get; set; }
+
+    public Product CreateFrom(ProductEntity entity)
+    {
+        var newProductModel = new Product()
+        {
+            Name = entity.Name,
+            Price = entity.Price,
+            Image = entity.Image,
+            Quantity = entity.Quantity
+        };
+
+        newProductModel._entity = entity;
+
+        return newProductModel;
+    }
+
+    public ProductEntity ToEntity()
+    {
+        if(_entity == null)
+            _entity = new ProductEntity();
+
+        _entity.Name = Name;
+        _entity.Price = Price;
+        _entity.Image = Image;
+        _entity.Quantity = Quantity;
+        
+        return _entity;
+    }
+
+    public override string ToString()
+    {
+        return Image + "\n" + Name + "\n" + Price;
+    }
 }
