@@ -1,10 +1,54 @@
+@model List<Product>
+
 <!DOCTYPE html>
 <html>
 <head>
-    <title>METANIT.COM</title>
-    <meta charset="utf-8" />
+    <link rel="stylesheet" href="~/css/site.css" />
 </head>
-<body>
-    <h2>Привет METANIT.COM!</h2>
-</body>
-</html>
+<div class="main-window">
+    <div class="menu-grid">
+        <div class="menu-hedaer">
+            <h2>Газированные напитки</h2>
+        </div>
+        <div class="brand-filter">
+            <h5>Выберите бренд</h5>
+            <select>
+                <option>Sprite</option>
+                <option>Coca-Cola</option>
+                <option>Fanta</option>
+                <option>DrPepper</option>
+            </select>
+        </div>
+        <div class="cost-filter">
+            <p>Фильтр цены</p>
+        </div>
+        <div class="menu-buttons">
+            <button class="import-button">Импорт</button>
+            <button class="nextPage-button">Выбрано: </button>
+        </div>
+    </div>
+    <br>
+    <div class="product-grid"></div>
+        @foreach (var product in Model)
+        {
+            <div class="product-card">
+                @if (!string.IsNullOrWhiteSpace(product.Image))
+                {
+                    <img src="/@product.Image" class="product-image" alt="@product.Name">
+                }
+                else
+                {
+                    <div class="no-image">
+                        <h3>Picture not found</h3>
+                    </div>
+                }
+                <div class="card-body">
+                    <h3>@product.Name</h3>
+                    <p class="text-muted">@product.Price.ToString("C")</p>
+                    <button class="select-btn">Выбрать</button>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
